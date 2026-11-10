@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "map_version": "interaction_full_demo_20261109",
+  "units": "m",
+  "bounds_wall_centerlines_m": {"xmin": -5.5, "xmax": 5.5, "ymin": 0.0, "ymax": 18.4},
+  "wall_thickness_m": 0.12,
+  "wall_height_m": 2.4,
+  "flight_height_m": 1.25,
+  "start_xyz_m": [0.24, 1.2, 1.25],
+  "goal_xyz_m": [0.24, 17.4, 1.25],
+  "internal_walls": [
+    {"id":"row_glass","y_m":2.6,"opening_ids":["F01","G01"]},
+    {"id":"row_skip","y_m":5.6,"opening_ids":["F02","S01"]},
+    {"id":"row_push","y_m":8.6,"opening_ids":["P01","F03"]},
+    {"id":"row_avoid","y_m":11.6,"opening_ids":["F04","A01"]},
+    {"id":"row_box","y_m":14.6,"opening_ids":["B01","F05"]}
+  ],
+  "openings": [
+    {"id":"F01","center_xy_m":[-4.2,2.6],"width_m":1.8,"normal_xy":[0,1]},
+    {"id":"G01","center_xy_m":[0,2.6],"width_m":1.45,"normal_xy":[0,1]},
+    {"id":"F02","center_xy_m":[-4.2,5.6],"width_m":1.8,"normal_xy":[0,1]},
+    {"id":"S01","center_xy_m":[-2.1,5.6],"width_m":1.3625,"normal_xy":[0,1]},
+    {"id":"P01","center_xy_m":[0,8.6],"width_m":1.3625,"normal_xy":[0,1]},
+    {"id":"F03","center_xy_m":[3.64,8.6],"width_m":1.8,"normal_xy":[0,1]},
+    {"id":"F04","center_xy_m":[-3.4,11.6],"width_m":1.8,"normal_xy":[0,1]},
+    {"id":"A01","center_xy_m":[0,11.6],"width_m":1.3625,"normal_xy":[0,1]},
+    {"id":"B01","center_xy_m":[0,14.6],"width_m":1.3625,"normal_xy":[0,1]},
+    {"id":"F05","center_xy_m":[4.4,14.6],"width_m":1.8,"normal_xy":[0,1]}
+  ]
+}

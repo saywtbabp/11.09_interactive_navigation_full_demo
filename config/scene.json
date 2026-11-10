@@ -1,0 +1,8 @@
+{
+  "contents":{"G01":"glass","S01":"door","P01":"door","A01":"door","B01":"box"},
+  "door_parameters":{"S01":[0.15,0.35],"P01":[0.32,0.05],"A01":[0.22,1.296]},
+  "box_parameters":{"B01":[1.1,0.62]},
+  "lambda_m_per_J":4.54,
+  "force_cap_N":2.2,
+  "note":"公开启动场景，仅用于建立物理世界；内容/真实参数不传给导航策略"
+}

@@ -1,0 +1,5 @@
+# Installed in project .vendor, without changing the MuJoCo Conda environment.
+onnxruntime==1.19.2
+coloredlogs==15.0.1
+humanfriendly==10.0
+flatbuffers==24.3.25

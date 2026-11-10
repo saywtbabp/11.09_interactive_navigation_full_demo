@@ -1,0 +1,6 @@
+# Existing interpreter: G:/anaconda3/envs/mujoco/python.exe (Python 3.9)
+mujoco==3.3.2
+numpy==2.0.2
+Pillow==11.3.0
+-r requirements-vision-runtime.txt
+# tkinter is supplied by the existing Conda environment. No package install needed.

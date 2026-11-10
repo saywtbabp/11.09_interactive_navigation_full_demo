@@ -1,0 +1,451 @@
+<mujoco model="tensegrity">
+  <!--<option timestep="0.002" collision="predefined" gravity="0 0 0"/>-->
+  <option timestep="0.002" cone="elliptic" impratio="100" density="1.225" viscosity="1.8e-5" integrator="implicitfast"/>
+  <default>
+    <site size="0.002" rgba="1 1 1 1"/>
+    <default class="tendon_spatial">
+          <tendon damping="7.03" stiffness="500" frictionloss="0.5" limited="true" range="0.0 0.27" width="0.002"/> <!-- previous damping="0.0703"-->
+    </default>
+    <default class="tendon_spatial_static">
+      <tendon damping="500" stiffness="0" frictionloss="0.5"/>
+    </default>
+    <default class="touch_prop_top">
+      <site pos="0 0 0.23" rgba="1 0 0 1" size=".0040 .0040 .0040"/>
+    </default>
+    <default class="touch_prop_bottom">
+      <site pos="0 0 -0.23" rgba="0 1 0 1" size=".0040 .0040 .0040"/>
+    </default>
+  </default>
+  <worldbody>
+    <light pos="0 1 1" dir="0 -1 -1" diffuse="1 1 1"/>
+    <camera name="robot_track_camera1" pos="0 -2 2" zaxis="0 -0.2 0.2" mode="trackcom" fovy="45"/>
+    <camera name="robot_track_camera2" pos="0 -3 3" zaxis="0 -0.2 0.2" mode="trackcom" fovy="45"/>
+    <camera name="robot_track_camera3" pos="0 0 3" euler="0 0 0" mode="trackcom" fovy="45"/>
+
+      <!-- link -->
+
+    <body name="link1" pos="0 0 1.365" euler="0 -90 0">
+      <geom name="link1" type="cylinder" size="0.004 0.23" mass="0.05" rgba="0 0 1 1" pos="0 0 0"/>
+      <body pos="0 0 0.23" name="capsule_1t">
+        <geom name="capsule_1t" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0.0"/>
+      </body>
+      <body pos="0 0 -0.23" name="capsule_1b">
+        <geom name="capsule_1b" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0"/>
+      </body>
+      <joint name="link1" type="free"/>
+      <site name="imu_link1" pos="0 0 0"/>
+      <site name="link1_top" class="touch_prop_top"/>
+      <site name="link1_top1" pos="0.002 0.002 0.23"/>
+      <site name="link1_top2" pos="-0.002 0.002 0.23"/>
+      <site name="link1_top3" pos="-0.002 -0.002 0.23"/>
+      <site name="link1_top4" pos="0.002 -0.002 0.23"/>
+      <site name="link1_bottom" class="touch_prop_bottom"/>
+      <site name="link1_bottom1" pos="0.002 0.002 -0.23"/>
+      <site name="link1_bottom2" pos="-0.002 0.002 -0.23"/>
+      <site name="link1_bottom3" pos="-0.002 -0.002 -0.23"/>
+      <site name="link1_bottom4" pos="0.002 -0.002 -0.23"/>
+    </body>
+
+    <body name="link2" pos="0 0 1.135" euler="0 -90 0">
+      <geom name="link2" type="cylinder" size="0.004 0.23" mass="0.05" rgba="1 0 1 1" pos="0 0 0"/>
+      <body pos="0 0 0.23" name="capsule_2t">
+        <geom name="capsule_2t" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0.0"/>
+      </body>
+      <body pos="0 0 -0.23" name="capsule_2b">
+        <geom name="capsule_2b" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0"/>
+      </body>
+      <joint name="link2" type="free"/>
+      <site name="imu_link2" pos="0 0 0"/>
+      <site name="link2_top" class="touch_prop_top"/>
+      <site name="link2_top1" pos="0.002 0.002 0.23"/>
+      <site name="link2_top2" pos="-0.002 0.002 0.23"/>
+      <site name="link2_top3" pos="-0.002 -0.002 0.23"/>
+      <site name="link2_top4" pos="0.002 -0.002 0.23"/>
+      <site name="link2_bottom" class="touch_prop_bottom"/>
+      <site name="link2_bottom1" pos="0.002 0.002 -0.23"/>
+      <site name="link2_bottom2" pos="-0.002 0.002 -0.23"/>
+      <site name="link2_bottom3" pos="-0.002 -0.002 -0.23"/>
+      <site name="link2_bottom4" pos="0.002 -0.002 -0.23"/>
+    </body>
+
+    <body name="link3" pos="0 -0.115 1.25" euler="0 0 0">
+      <geom name="link3" type="cylinder" size="0.004 0.23" mass="0.05" rgba="1 0 0 1" pos="0 0 0"/>
+      <body pos="0 0 0.23" name="capsule_3t">
+        <geom name="capsule_3t" type="capsule" size="0.004 0.005" mass="0.002" pos="0 0 0"/>
+      </body>
+        <body pos="0 0 -0.23" name="capsule_3b">
+        <geom name="capsule_3b" type="capsule" size="0.004 0.005" mass="0.002" pos="0 0 0"/>
+      </body>
+      <joint name="link3" type="free"/>
+      <site name="imu_link3" pos="0 0 0"/>
+      <site name="link3_top" class="touch_prop_top"/> <!-- 0 0 0.2-->
+      <site name="link3_top1" pos="0.002 0.002 0.23"/>
+      <site name="link3_top2" pos="-0.002 0.002 0.23"/>
+      <site name="link3_top3" pos="-0.002 -0.002 0.23"/>
+      <site name="link3_top4" pos="0.002 -0.002 0.23"/>
+      <site name="link3_bottom" class="touch_prop_bottom"/>
+      <site name="link3_bottom1" pos="0.002 0.002 -0.23"/>
+      <site name="link3_bottom2" pos="-0.002 0.002 -0.23"/>
+      <site name="link3_bottom3" pos="-0.002 -0.002 -0.23"/>
+      <site name="link3_bottom4" pos="0.002 -0.002 -0.23"/>
+    </body>
+
+    <body name="link4" pos="0 0.115 1.25" euler="0 0 0">
+      <geom name="link4" type="cylinder" size="0.004 0.23" mass="0.05" rgba="1 1 0 1" pos="0 0 0"/>
+      <body pos="0 0 0.23" name="capsule_4t">
+        <geom name="capsule_4t" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0.0"/>
+      </body>
+      <body pos="0 0 -0.23" name="capsule_4b">
+        <geom name="capsule_4b" type="capsule" size="0.004 0.005" mass="0.002" pos="0.0 0.0 0"/>
+      </body>
+      <joint name="link4" type="free"/>
+      <site name="imu_link4" pos="0 0 0"/>
+      <site name="link4_top" class="touch_prop_top"/> <!-- 0 0 0.2-->
+      <site name="link4_top1" pos="0.002 0.002 0.23"/>
+      <site name="link4_top2" pos="-0.002 0.002 0.23"/>
+      <site name="link4_top3" pos="-0.002 -0.002 0.23"/>
+      <site name="link4_top4" pos="0.002 -0.002 0.23"/>
+      <site name="link4_bottom" class="touch_prop_bottom"/>
+      <site name="link4_bottom1" pos="0.002 0.002 -0.23"/>
+      <site name="link4_bottom2" pos="-0.002 0.002 -0.23"/>
+      <site name="link4_bottom3" pos="-0.002 -0.002 -0.23"/>
+      <site name="link4_bottom4" pos="0.002 -0.002 -0.23"/>
+    </body>
+
+    <body name="quad_frame" pos="0 0 1.265"  euler="0 0 0">
+      <joint name="frame_joint" type="free"/>
+      <!-- X形长方体机架 -->
+      <geom name="arm1" type="box" 
+            pos="0 0 0" 
+            euler="0 0 45"
+            size="0.13 0.011 0.0015" 
+            mass="0.02" 
+            rgba="0.5 0.5 0.5 1"/>
+      
+      <geom name="arm2" type="box"
+            pos="0 0 0" 
+            euler="0 0 -45"
+            size="0.13 0.011 0.0015" 
+            mass="0.02"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector11" type="box"
+            pos="0.1017 -0.08839 0.00"
+            size="0.014 0.0133 0.003" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector12" type="box"
+            pos="0.115 -0.08839 -0.0075"
+            size="0.0014 0.014  0.0075" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector21" type="box"
+            pos="0.1017 0.08839  0.00"
+            size="0.0133 0.014 0.003" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector22" type="box"
+            pos="0.115 0.08839  -0.0075"
+            size="0.0014 0.014  0.0075" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector31" type="box"
+            pos="-0.1017 0.08839  0.00"
+            size="0.0133 0.014 0.003" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector32" type="box"
+            pos="-0.115 0.08839  -0.0075"
+            size="0.0014 0.014  0.0075" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+      
+      <geom name="connector41" type="box"
+            pos="-0.1017 -0.08839  0.00"
+            size="0.0133 0.014 0.003" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <geom name="connector42" type="box"
+            pos="-0.115 -0.08839  -0.0075"
+            size="0.0014 0.014  0.0075" 
+            mass="0.005"
+            rgba="0.5 0.5 0.5 1"/>
+
+      <!-- 四个电机 -->
+      <geom name="motor1" type="cylinder"
+            fromto="0.08839 -0.08839 0 0.08839 -0.08839 0.018"
+            size="0.014" mass="0.003"
+            rgba="0.8 0.8 0.8 1"/>
+      
+      <geom name="motor2" type="cylinder"
+            fromto="0.08839 0.08839 0 0.08839 0.08839 0.018"
+            size="0.014" mass="0.003"
+            rgba="0.8 0.8 0.8 1"/>
+      
+      <geom name="motor3" type="cylinder"
+            fromto="-0.08839 0.08839 0 -0.08839 0.08839 0.018"
+            size="0.014" mass="0.003"
+            rgba="0.8 0.8 0.8 1"/>
+      
+      <geom name="motor4" type="cylinder"
+            fromto="-0.08839 -0.08839 0 -0.08839 -0.08839 0.018"
+            size="0.014" mass="0.003"
+            rgba="0.8 0.8 0.8 1"/>
+
+      <!-- 在 quad_frame 内添加螺旋桨可视化 geom -->
+      <geom name="propeller1" type="cylinder" pos="0.08839 -0.08839 0.02" size="0.062 0.002" rgba="0.8 0.8 0.8 1"/>
+      <geom name="propeller2" type="cylinder" pos="0.08839 0.08839 0.02" size="0.062 0.002" rgba="0.8 0.8 0.8 1"/>
+      <geom name="propeller3" type="cylinder" pos="-0.08839 0.08839 0.02" size="0.062 0.002" rgba="0.8 0.8 0.8 1"/>
+      <geom name="propeller4" type="cylinder" pos="-0.08839 -0.08839 0.02" size="0.062 0.002" rgba="0.8 0.8 0.8 1"/>
+
+      <site name="thrust1" pos="0.08839 -0.08839 0.02"/>
+      <site name="thrust2" pos="0.08839 0.08839 0.02"/>
+      <site name="thrust3" pos="-0.08839 0.08839 0.02"/>
+      <site name="thrust4" pos="-0.08839 -0.08839 0.02"/>
+
+      <site name="imu" pos="0 0 .018"/>            
+      <geom name="center" type="box" size="0.039 0.033  0.0015" pos="0 0 0" mass="0.05" rgba="0.5 0.5 0.5 1"/>
+      <geom name="center_PX" type="box" size="0.044  0.0235 0.033" pos="0 0 0.036" mass="0.3" rgba="0.5 0.5 0.5 1"/>
+      <geom name="center_Bat" type="box" size="0.05 0.018  0.0165" pos="0 0 -0.018" mass="0.22" rgba="0.5 0.5 0.5 1"/>
+
+      <!-- 修改后的link5（作为子体） -->
+      <body name="link5" pos="-0.115 0 -0.015" euler="90 0 0">
+        <geom name="link5" type="cylinder" size="0.004 0.23" mass="0.05" rgba="0 1 0 1"/>
+        <body pos="0 0 0.23" name="capsule_5t">
+          <geom name="capsule_5t" type="capsule" size="0.004 0.005" mass="0.002"/>
+        </body>
+        <body pos="0 0 -0.23" name="capsule_5b">
+          <geom name="capsule_5b" type="capsule" size="0.004 0.005" mass="0.002"/>
+        </body>
+        <site name="imu_link5" pos="0 0 0"/>
+        <site name="link5_top" class="touch_prop_top"/> 
+        <site name="link5_top1" pos="0.002 0.002 0.23"/>
+        <site name="link5_top2" pos="-0.002 0.002 0.23"/>
+        <site name="link5_top3" pos="-0.002 -0.002 0.23"/>
+        <site name="link5_top4" pos="0.002 -0.002 0.23"/>
+        <site name="link5_bottom" class="touch_prop_bottom"/>
+        <site name="link5_bottom1" pos="0.002 0.002 -0.23"/>
+        <site name="link5_bottom2" pos="-0.002 0.002 -0.23"/>
+        <site name="link5_bottom3" pos="-0.002 -0.002 -0.23"/>
+        <site name="link5_bottom4" pos="0.002 -0.002 -0.23"/>
+      </body>
+
+      <!-- 修改后的link6（作为子体） -->
+      <body name="link6" pos="0.115 0 -0.015" euler="90 0 0">
+        <geom name="link6" type="cylinder" size="0.004 0.23" mass="0.05" rgba="0 1 1 1"/>
+        <body pos="0 0 0.23" name="capsule_6t">
+          <geom name="capsule_6t" type="capsule" size="0.004 0.005" mass="0.002"/>
+        </body>
+        <body pos="0 0 -0.23" name="capsule_6b">
+          <geom name="capsule_6b" type="capsule" size="0.004 0.005" mass="0.002"/>
+        </body>
+        <site name="imu_link6" pos="0 0 0"/>
+        <site name="link6_top" class="touch_prop_top"/>
+        <site name="link6_top1" pos="0.002 0.002 0.23"/>
+        <site name="link6_top2" pos="-0.002 0.002 0.23"/>
+        <site name="link6_top3" pos="-0.002 -0.002 0.23"/>
+        <site name="link6_top4" pos="0.002 -0.002 0.23"/>
+        <site name="link6_bottom" class="touch_prop_bottom"/>
+        <site name="link6_bottom1" pos="0.002 0.002 -0.23"/>
+        <site name="link6_bottom2" pos="-0.002 0.002 -0.23"/>
+        <site name="link6_bottom3" pos="-0.002 -0.002 -0.23"/>
+        <site name="link6_bottom4" pos="0.002 -0.002 -0.23"/>
+        <!-- 保留原有site定义 -->
+      </body>
+    </body>
+  </worldbody>
+
+  <tendon>
+  <!-- <tendon> -->
+    <spatial name="link13t_52t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_top3"/>
+      <site site="link5_top2"/>
+    </spatial>
+    <spatial name="link12t_52b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_top2"/>
+      <site site="link5_bottom2"/>
+    </spatial>
+    <spatial name="link13b_61t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_bottom3"/>
+      <site site="link6_top1"/>
+    </spatial>
+    <spatial name="link12b_61b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_bottom2"/>
+      <site site="link6_bottom1"/>
+    </spatial>
+    <spatial name="link24t_53t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_top4"/>
+      <site site="link5_top3"/>
+    </spatial>
+    <spatial name="link21t_53b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_top1"/>
+      <site site="link5_bottom3"/>
+    </spatial>
+    <spatial name="link24b_64t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_bottom4"/>
+      <site site="link6_top4"/>
+    </spatial>
+    <spatial name="link21b_64b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_bottom1"/>
+      <site site="link6_bottom4"/>
+    </spatial>
+    <spatial name="link32t_51t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link3_top3"/>
+      <site site="link5_top1"/>
+    </spatial>
+    <spatial name="link34t_62t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link3_top4"/>
+      <site site="link6_top2"/>
+    </spatial>
+    <spatial name="link33b_54t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link3_bottom3"/>
+      <site site="link5_top4"/>
+    </spatial>
+    <spatial name="link34b_63t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link3_bottom4"/>
+      <site site="link6_top3"/>
+    </spatial>
+    <spatial name="link42t_51b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link4_top2"/>
+      <site site="link5_bottom1"/>
+    </spatial>
+    <spatial name="link41t_62b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link4_top1"/>
+      <site site="link6_bottom2"/>
+    </spatial>
+    <spatial name="link42b_54b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link4_bottom2"/>
+      <site site="link5_bottom4"/>
+    </spatial>
+    <spatial name="link41b_63b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link4_bottom1"/>
+      <site site="link6_bottom3"/>
+    </spatial>
+    <spatial name="link14t_32t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_top4"/>
+      <site site="link3_top2"/>
+    </spatial>
+    <spatial name="link11t_43t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_top1"/>
+      <site site="link4_top3"/>
+    </spatial>
+    <spatial name="link14b_31t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_bottom4"/>
+      <site site="link3_top1"/>
+    </spatial>
+    <spatial name="link11b_44t" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link1_bottom1"/>
+      <site site="link4_top4"/>
+    </spatial>
+   <spatial name="link23t_32b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_top3"/>
+      <site site="link3_bottom2"/>
+    </spatial>
+    <spatial name="link22t_43b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_top2"/>
+      <site site="link4_bottom3"/>
+    </spatial>
+    <spatial name="link23b_31b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_bottom3"/>
+      <site site="link3_bottom1"/>
+    </spatial>
+    <spatial name="link22b_44b" class="tendon_spatial" rgba="0 0 0 1">
+      <site site="link2_bottom2"/>
+      <site site="link4_bottom4"/>
+    </spatial>   
+  </tendon>
+
+  <!-- 新增执行器部分 -->
+  <actuator>
+    <!-- 四旋翼推力执行器 -->
+    <general name="thruster1" site="thrust1" ctrllimited="true" ctrlrange="0 10" 
+            gear="0 0 1 0 0 .01302"/>
+    
+    <general name="thruster2" site="thrust2" ctrllimited="true" ctrlrange="0 10" 
+            gear="0 0 1 0 0 -.01302"/>
+    
+    <general name="thruster3" site="thrust3" ctrllimited="true" ctrlrange="0 10" 
+            gear="0 0 1 0 0 .01302"/>
+    
+    <general name="thruster4" site="thrust4" ctrllimited="true" ctrlrange="0 10" 
+            gear="0 0 1 0 0 -.01302"/>
+
+    <!-- 姿态控制执行器（可选） -->
+    <motor name="pitch_ctrl" joint="frame_joint" ctrllimited="true" ctrlrange="-1 1"/>
+    <motor name="roll_ctrl" joint="frame_joint" ctrllimited="true" ctrlrange="-1 1"/>
+    <motor name="yaw_ctrl" joint="frame_joint" ctrllimited="true" ctrlrange="-1 1"/>
+  </actuator>
+
+  <sensor>
+      <!-- 球体传感器定义： -->
+    <framepos name="pos_link1" objname="link1" objtype="body"/>
+    <framelinvel name="linvel_link1" objname="link1" objtype="body"/>
+    <framequat name="quat_link1" objname="link1" objtype="body"/>
+
+    <framepos name="pos_link2" objname="link2" objtype="body"/>
+    <framelinvel name="linvel_link2" objname="link2" objtype="body"/>
+    <framequat name="quat_link2" objname="link2" objtype="body"/>
+
+    <framepos name="pos_link3" objname="link3" objtype="body"/>
+    <framelinvel name="linvel_link3" objname="link3" objtype="body"/>
+    <framequat name="quat_link3" objname="link3" objtype="body"/>
+
+    <framepos name="pos_link4" objname="link4" objtype="body"/>
+    <framelinvel name="linvel_link4" objname="link4" objtype="body"/>
+    <framequat name="quat_link4" objname="link4" objtype="body"/>
+
+    <framepos name="pos_link5" objname="link5" objtype="body"/>
+    <framelinvel name="linvel_link5" objname="link5" objtype="body"/>
+    <framequat name="quat_link5" objname="link5" objtype="body"/>
+
+    <framepos name="pos_link6" objname="link6" objtype="body"/>
+    <framelinvel name="linvel_link6" objname="link6" objtype="body"/>
+    <framequat name="quat_link6" objname="link6" objtype="body"/>
+    
+    <framepos name="pos" objname="imu" objtype="site"/>
+    <framelinvel name="linvel" objname="imu" objtype="site"/>
+    <framequat name="quat" objname="imu" objtype="site"/>
+    <!-- define imu sensor -->
+    <accelerometer name="imu_acc_link1" site="imu_link1"/>
+    <gyro name="imu_gyro_link1" site="imu_link1"/>
+    
+    <accelerometer name="imu_acc_link2" site="imu_link2"/>
+    <gyro name="imu_gyro_link2" site="imu_link2"/>
+
+    <accelerometer name="imu_acc_link3" site="imu_link3"/>
+    <gyro name="imu_gyro_link3" site="imu_link3"/>
+
+    <accelerometer name="imu_acc_link4" site="imu_link4"/>
+    <gyro name="imu_gyro_link4" site="imu_link4"/>
+
+    <accelerometer name="imu_acc_link5" site="imu_link5"/>
+    <gyro name="imu_gyro_link5" site="imu_link5"/>
+
+    <accelerometer name="imu_acc_link6" site="imu_link6"/>
+    <gyro name="imu_gyro_link6" site="imu_link6"/>
+
+    <accelerometer name="imu_acc" site="imu"/>
+    <gyro name="imu_gyro" site="imu"/>
+
+    <!-- define touch sensor -->
+    <touch name="touch_link1_top" site="link1_top"/>
+    <touch name="touch_link1_bottom" site="link1_bottom"/>
+    <touch name="touch_link2_top" site="link2_top"/>
+    <touch name="touch_link2_bottom" site="link2_bottom"/>
+    <touch name="touch_link3_top" site="link3_top"/>
+    <touch name="touch_link3_bottom" site="link3_bottom"/>
+    <touch name="touch_link4_top" site="link4_top"/>
+    <touch name="touch_link4_bottom" site="link4_bottom"/>
+    <touch name="touch_link5_top" site="link5_top"/>
+    <touch name="touch_link5_bottom" site="link5_bottom"/>
+    <touch name="touch_link6_top" site="link6_top"/>
+    <touch name="touch_link6_bottom" site="link6_bottom"/>
+  </sensor>
+
+</mujoco>

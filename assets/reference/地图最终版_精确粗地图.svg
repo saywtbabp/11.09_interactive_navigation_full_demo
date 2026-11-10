@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1160" viewBox="0 0 1000 1160">
+<rect width="1000" height="1160" fill="#f4f8fc"/>
+<text x="500" y="62" font-family="Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#123f6b" text-anchor="middle">地图最终版：精确粗地图</text>
+<text x="500" y="105" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="middle">同一米制几何 · 仅建筑结构、匿名开口与起终点</text>
+<rect x="170" y="140" width="660" height="780" fill="white"/>
+<polyline points="170,920 170,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="200,920 200,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="230,920 230,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="260,920 260,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="290,920 290,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="320,920 320,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="350,920 350,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="380,920 380,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="410,920 410,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="440,920 440,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="470,920 470,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="500,920 500,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="530,920 530,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="560,920 560,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="590,920 590,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="620,920 620,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="650,920 650,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="680,920 680,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="710,920 710,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="740,920 740,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="770,920 770,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="800,920 800,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="830,920 830,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,920 830,920" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,890 830,890" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,860 830,860" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,830 830,830" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,800 830,800" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,770 830,770" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,740 830,740" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,710 830,710" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,680 830,680" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,650 830,650" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,620 830,620" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,590 830,590" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,560 830,560" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,530 830,530" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,500 830,500" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,470 830,470" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,440 830,440" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,410 830,410" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,380 830,380" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,350 830,350" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,320 830,320" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,290 830,290" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,260 830,260" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,230 830,230" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,200 830,200" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,170 830,170" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,140 830,140" fill="none" stroke="#e1edf8" stroke-width="1"/>
+<polyline points="170,920 830,920 830,140 170,140 170,920" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="170,764 489.125,764" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="489.125,764 570.875,764" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="530.0" y="752.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O01</text>
+<polyline points="570.875,764 710,764" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="710,764 818,764" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="764.0" y="752.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O02</text>
+<polyline points="818,764 830,764" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="170,596 194,596" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="194,596 302,596" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="248.0" y="584.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O04</text>
+<polyline points="302,596 366.5,596" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="366.5,596 453.5,596" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="410.0" y="584.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O03</text>
+<polyline points="453.5,596 830,596" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="170,428 549.125,428" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="549.125,428 630.875,428" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="590.0" y="416.00000000000006" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O05</text>
+<polyline points="630.875,428 668,428" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="668,428 776,428" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="722.0" y="416.00000000000006" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O06</text>
+<polyline points="776,428 830,428" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="170,284 506,284" fill="none" stroke="#30343b" stroke-width="7"/>
+<polyline points="506,284 614,284" fill="none" stroke="#7735e8" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="560.0" y="272.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#7735e8" text-anchor="middle">O07</text>
+<polyline points="614,284 830,284" fill="none" stroke="#30343b" stroke-width="7"/>
+<text x="152.0" y="927" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">0</text>
+<text x="152.0" y="771.0" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">2.6</text>
+<text x="152.0" y="603.0" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">5.4</text>
+<text x="152.0" y="435.00000000000006" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">8.2</text>
+<text x="152.0" y="291.0" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">10.6</text>
+<text x="152.0" y="147" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="end">13</text>
+<text x="200.0" y="957" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="middle">-5</text>
+<text x="500.0" y="957" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="middle">0</text>
+<text x="800.0" y="957" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="middle">5</text>
+<text x="112" y="127" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="400" fill="#123f6b" text-anchor="start">y / m</text>
+<text x="848" y="950" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="400" fill="#123f6b" text-anchor="start">x / m</text>
+<circle cx="272" cy="848" r="9" fill="#00a254"/>
+<text x="290.0" y="853.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#00a254" text-anchor="start">S 起点</text>
+<circle cx="560" cy="200" r="9" fill="#c20c69"/>
+<text x="578.0" y="205.0" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#c20c69" text-anchor="start">T 终点</text>
+<text x="500" y="1003" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#123f6b" text-anchor="middle">O01=(0.5, 2.6)   O03=(-1.5, 5.4)   O06=(3.7, 8.2) m</text>
+<text x="500" y="1045" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="400" fill="#123f6b" text-anchor="middle">11 × 13 m · 四条主体隔墙 · 七个开口 · 飞行高度 1.25 m</text>
+<text x="500" y="1083" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#123f6b" text-anchor="middle">由 architecture_final.json 生成；门、玻璃和通行状态不写入初始粗图</text>
+<text x="500" y="1118" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#123f6b" text-anchor="middle">此图用于米制建模核对；概念图透视与像素不作为几何输入</text>
+</svg>

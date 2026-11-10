@@ -1,0 +1,65 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+/.venv/
+/venv/
+/.vendor/
+/.training_deps*/
+/.matplotlib/
+/.ultralytics/
+
+# Local editor settings and temporary files
+/.idea/
+/.vscode/
+*.iml
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+Thumbs.db
+.DS_Store
+
+# Generated runs, reports, and release archives
+/results/
+/runs/
+/report.html
+/DELIVERY_MANIFEST.json
+/*.zip
+/*.zip.sha256
+
+# Generated training data. Keep only the frozen scene layout for regeneration.
+/data/*
+!/data/vision_synthetic/
+/data/vision_synthetic/*
+!/data/vision_synthetic/generation_architecture.json
+
+# Keep the current three-class ONNX and its metadata. Only the checkpoint used
+# to initialize the optional training tool is needed among the PyTorch weights.
+/models/vision/*.pt
+!/models/vision/door_glass_yolov8n.pt
+/models/vision/door_glass_yolov8n.onnx
+
+# Native build byproducts. The Windows runtime loads fast_grid.dll directly.
+/navigation/native/*.obj
+/navigation/native/*.o
+/navigation/native/*.lib
+/navigation/native/*.pdb
+/navigation/native/*.dll
+!/navigation/native/fast_grid.dll
+
+# Standalone tests and one-off checks of historical runs
+/tests/
+test_*.py
+*_test.py
+.coverage
+/htmlcov/
+/tools/check_*.py
+/tools/check_*.mjs
+/tools/compare_*.py
+/tools/camera_layout.py
+/WORKLOG.md
+/VALIDATION.md

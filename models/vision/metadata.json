@@ -1,0 +1,21 @@
+{
+  "architecture": "YOLOv8n",
+  "classes": {
+    "0": "door",
+    "1": "suspected_glass",
+    "2": "box"
+  },
+  "epochs": 24,
+  "onnx_sha256": "064e4ee6b978faed9a1c4d484c4d63ef9fcecf076b8d4d683b60e0e66684ac54",
+  "input_size": 320,
+  "test_metrics": {
+    "metrics/precision(B)": 0.9582279738729323,
+    "metrics/recall(B)": 0.9662698412698413,
+    "metrics/mAP50(B)": 0.99147982923845,
+    "metrics/mAP50-95(B)": 0.962012729151505,
+    "fitness": 0.9649594391601996
+  },
+  "scope": "synthetic randomized scenes; not real-world recognition accuracy",
+  "training_manifest": "data/vision_synthetic/manifest.json",
+  "license": "Ultralytics AGPL-3.0; see https://ultralytics.com/license"
+}
